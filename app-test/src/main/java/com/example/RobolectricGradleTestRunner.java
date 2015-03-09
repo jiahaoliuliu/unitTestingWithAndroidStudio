@@ -3,8 +3,6 @@ package com.example;
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
-import org.robolectric.internal.bytecode.ClassInfo;
-import org.robolectric.internal.bytecode.InstrumentingClassLoaderConfig;
 import org.robolectric.manifest.AndroidManifest;
 import org.robolectric.res.Fs;
 

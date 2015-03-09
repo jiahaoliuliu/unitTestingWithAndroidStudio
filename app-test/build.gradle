@@ -3,4 +3,13 @@ evaluationDependsOn(":app")
 apply plugin: 'java'
 
 dependencies {
+    def androidModule = project(':app')
+    compile project(path: ':app', configuration: 'debugCompile')
+
+    def debugVariant = androidModule.android.applicationVariants.find({it.name == 'debug'})
+    compile debugVariant.javaCompile.classpath
+    compile debugVariant.javaCompile.outputs.files
+    compile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
+
+    compile 'org.robolectric:robolectric:3.0-SNAPSHOT'
 }

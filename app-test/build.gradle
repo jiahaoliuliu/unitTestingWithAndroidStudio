@@ -12,4 +12,5 @@ dependencies {
     compile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
 
     compile 'org.robolectric:robolectric:3.0-SNAPSHOT'
+    compile 'junit:junit:4.11'
 }

@@ -1,4 +1,4 @@
-package com.example;
+package com.jiahaoliuliu.unittestingwithandroidstudio;
 
 import org.junit.runners.model.InitializationError;
 import org.robolectric.RobolectricTestRunner;

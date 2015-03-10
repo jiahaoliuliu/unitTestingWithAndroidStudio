@@ -1,13 +1,9 @@
-package com.example;
-
-import com.jiahaoliuliu.unittestingwithandroidstudio.MainActivity;
+package com.jiahaoliuliu.unittestingwithandroidstudio;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-
-//import static org.junit.Assert.assertNotNull;
 
 /**
  * Created by jiahao on 3/9/15.

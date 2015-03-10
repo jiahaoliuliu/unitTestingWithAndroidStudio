@@ -5,6 +5,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 
+import static org.junit.Assert.assertNotNull;
+
 /**
  * Created by jiahao on 3/9/15.
  */
@@ -20,6 +22,6 @@ public class MainActivityTest {
 
     @Test
     public void simpleTest() {
-//        assertNotNull(mMainActivity);
+        assertNotNull(mMainActivity);
     }
 }

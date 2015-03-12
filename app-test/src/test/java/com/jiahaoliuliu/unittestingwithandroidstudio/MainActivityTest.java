@@ -1,6 +1,9 @@
 package com.jiahaoliuliu.unittestingwithandroidstudio;
 
 import android.content.Intent;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import org.junit.After;
 import org.junit.Before;
@@ -31,8 +34,21 @@ public class MainActivityTest {
     }
 
     @Test
-    public void simpleTest() {
+    public void linkedViewsTest() {
         assertThat(mMainActivity).isNotNull();
+
+        EditText mFirstNumberET = (EditText)mMainActivity.findViewById(R.id.first_number_et);
+        assertThat(mFirstNumberET).isNotNull();
+
+        EditText mSecondNumberET = (EditText)mMainActivity.findViewById(R.id.second_number_et);
+        assertThat(mSecondNumberET).isNotNull();
+
+        TextView mResultTV = (TextView)mMainActivity.findViewById(R.id.result_tv);
+        assertThat(mResultTV).isNotNull();
+
+        Button mCalculateBtn = (Button)mMainActivity.findViewById(R.id.calculate_btn);
+        assertThat(mCalculateBtn).isNotNull();
+
     }
 
     @After

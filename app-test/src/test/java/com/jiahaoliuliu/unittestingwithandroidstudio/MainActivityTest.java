@@ -1,11 +1,14 @@
 package com.jiahaoliuliu.unittestingwithandroidstudio;
 
+import android.content.Intent;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.annotation.Config;
+import org.robolectric.shadows.ShadowApplication;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,7 +22,12 @@ public class MainActivityTest {
 
     @Before
     public void setup() {
-        mMainActivity = Robolectric.buildActivity(MainActivity.class).create().get();
+        Intent startMainActivityIntent = new Intent(
+                ShadowApplication.getInstance().getApplicationContext(), MainActivity.class);
+        // Here you can add any data to the intent
+
+        mMainActivity = Robolectric.buildActivity(MainActivity.class)
+                .withIntent(startMainActivityIntent).create().get();
     }
 
     @Test

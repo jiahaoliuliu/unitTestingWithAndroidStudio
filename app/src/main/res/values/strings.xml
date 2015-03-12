@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Unit testing with Android Studio</string>
 
+    // Launch activity
+    <string name="launch_button">Launch calculator</string>
+
+    // Calculator activity
     <string name="first_number_hint">Enter a number</string>
     <string name="second_number_hint">Enter another number</string>
+    <string name="title_activity_launch">LaunchActivity</string>
+
 </resources>

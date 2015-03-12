@@ -1,9 +1,11 @@
 package com.jiahaoliuliu.unittestingwithandroidstudio;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
+import org.robolectric.annotation.Config;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -23,5 +25,10 @@ public class MainActivityTest {
     @Test
     public void simpleTest() {
         assertThat(mMainActivity).isNotNull();
+    }
+
+    @After
+    public void tearDown() {
+        mMainActivity = null;
     }
 }

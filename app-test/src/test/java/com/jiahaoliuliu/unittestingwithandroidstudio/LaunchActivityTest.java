@@ -40,10 +40,6 @@ public class LaunchActivityTest {
 
     @Test
     public void checkIntentLaunched() {
-        Intent expectedIntent =
-                new Intent(ShadowApplication.getInstance().getApplicationContext(),
-                        MainActivity.class);
-
         Button mLaunchCalculatorBtn = (Button) mLaunchActivity.findViewById(R.id.launch_calculator_btn);
         mLaunchCalculatorBtn.performClick();
 
@@ -51,8 +47,9 @@ public class LaunchActivityTest {
         Intent startedIntent = shadowActivity.getNextStartedActivity();
         ShadowIntent shadowIntent = Shadows.shadowOf(startedIntent);
 
-        assertThat(Shadows.shadowOf(mLaunchActivity).getNextStartedActivity())
-                .isEqualTo(expectedIntent);
+        assertThat(shadowIntent.getComponent())
+                .isEqualTo(new ComponentName(mLaunchActivity, MainActivity.class));
+
     }
 
     @After
